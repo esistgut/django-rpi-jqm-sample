@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>{% block title %}{% endblock %}</title>
+		<link rel="stylesheet" href="/static/jquery.mobile-1.4.0-rc.1/demos/css/themes/default/jquery.mobile-1.4.0-rc.1.min.css">
+		<link rel="stylesheet" href="/static/jquery.mobile-1.4.0-rc.1/demos/_assets/css/jqm-demos.css">
+		<script src="/static/jquery.mobile-1.4.0-rc.1/demos/js/jquery.js"></script>
+		<script src="/static/jquery.mobile-1.4.0-rc.1/demos/_assets/js/index.js"></script>
+		<script src="/static/jquery.mobile-1.4.0-rc.1/demos/js/jquery.mobile-1.4.0-rc.1.min.js"></script>
+	</head>
+	<body>
+	<div data-role="page" class="jqm-demos" data-quicklinks="true">
+
+		<div data-role="header" class="jqm-header">
+			<h2><a href="#" title="jQuery Mobile Demos home"><img src="/static/jquery.mobile-1.4.0-rc.1/demos/_assets/img/jquery-logo.png" alt="jQuery Mobile"></a></h2>
+		<p><span class="jqm-version"></span> Demos</p>
+			<a href="#" class="jqm-navmenu-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars ui-nodisc-icon ui-alt-icon ui-btn-left">Menu</a>
+			</div><!-- /header -->
+
+
+    <div role="main" class="ui-content jqm-content">
+
+        {% block content %}{% endblock %}
+
+	</div><!-- /content -->
+
+
+	    <div data-role="panel" class="jqm-navmenu-panel" data-position="left" data-display="overlay" data-theme="a">
+	    	<ul class="jqm-list ui-alt-icon ui-nodisc-icon">
+                <li data-filtertext="demos form1"><a href="/demo1/">Form 1</a></li>
+                <li data-filtertext="demos form1"><a href="/demo2/">Form 2</a></li>
+		     </ul>
+		</div><!-- /panel -->
+
+
+	<div data-role="footer" data-position="fixed" data-tap-toggle="false" class="jqm-footer">
+		<p>Django RaspberryPI jQuery Mobile demo<span class="jqm-version"></span></p>
+		<p>Copyright 2013 Giacomo Graziosi</p>
+	</div><!-- /footer -->
+
+
+</div><!-- /page -->
+
+</body>
+</html>

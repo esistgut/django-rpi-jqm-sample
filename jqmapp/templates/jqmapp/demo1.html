@@ -1,0 +1,34 @@
+{% extends "jqmapp/layout.html" %}
+{% load i18n %}
+
+{% block title %}Demo 1{% endblock %}
+
+{% block content %}
+
+				<form action="{% url 'demo1' %}" method="post" data-transition="none">
+					{% csrf_token %}
+
+					<h2>First demo form</h2>
+
+					<p>Some fields...</p>
+
+					{{ form.non_field_errors }}
+
+
+
+				    {% for field in form %}
+						<div data-role="fieldcontain">
+							{{ field.errors }}
+							{{ field.label_tag }}
+							{{ field }}
+						</div>
+				    {% endfor %}
+
+                    <div>
+                        <label for="submit-6">Send:</label>
+                        <button type="submit" class="ui-shadow ui-btn ui-corner-all ui-mini">Submit</button>
+                    </div>
+
+				</form>
+
+{% endblock %}
